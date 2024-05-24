@@ -1,8 +1,19 @@
 {% extends 'base.html' %}
 
 {% block content %}
-  <h1>{{ ticket.title }}</h1>
-  <p>{{ ticket.description }}</p>
-  <p>Status: {{ ticket.status }}</p>
-  <p>Created at: {{ ticket.created_at }}</p>
+<div class="card text-bg-secondary mt-3 mb-3" style="max-width: 18rem;">
+  <div class="card-header">Created at: {{ ticket.created_at }}</div>
+  <div class="card-body">
+    <h5 class="card-title">{{ ticket.title }}</h5>
+    <p class="card-text">{{ ticket.description }}</p>
+  </div>
+</div>
+
+
+<!--<h1 style="color: white;">{{ ticket.title }}</h1>
+<ul> 
+  <p style="color: white;">{{ ticket.description }}</p>
+  <p style="color: white;">Status: {{ ticket.status }}</p>
+  <p style="color: white;">Created at: {{ ticket.created_at }}</p>
+</ul> -->
 {% endblock %}

@@ -1,12 +1,21 @@
 {% extends 'base.html' %}
 
 {% block content %}
-  <h1>Add New Ticket</h1>
-  <form method="POST">
-    <label for="title">Title:</label>
-    <input type="text" id="title" name="title" required>
-    <label for="description">Description:</label>
-    <textarea id="description" name="description" required></textarea>
-    <button type="submit">Add Ticket</button>
-  </form>
+  <h1 style="color: white;">Add New Ticket</h1>
+  <div row>
+    <div class="col-4">
+      <form method="POST">
+        <div class="mb-4">
+          <label for="title" class="form-label" style="color: white;">Title</label>
+          <input type="text" class="form-control" id="title" name="title" required>
+        </div>
+        <div class="mb-3">
+          <label for="description" class="form-label" style="color: white;">Description</label>
+          <input type="text" class="form-control" id="description" name="description" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+  </div>
+  
 {% endblock %}
